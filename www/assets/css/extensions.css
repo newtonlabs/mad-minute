@@ -1,4 +1,12 @@
-.bottom {border-bottom: #000 1px solid}
-.math   {text-align: right; font-family: 'courier'}
+.top    {margin-bottom: 10px}
+.bottom {margin-bottom: 5px}
+.line   {border-bottom: #000 1px solid; margin: 0px}
+.math   {text-align: right; font-family: 'courier'; font-size: 18pt}
 .hidden {display: none}
-.answer {color: red}
+.answer {color: red; margin-bottom: 20px}
+.math .row .span1{margin-right: 15px}
+
+@media print {
+  .navbar {display: none;} 
+  .controls {display: none;} 
+}

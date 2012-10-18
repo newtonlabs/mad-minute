@@ -31,7 +31,7 @@
               %li
               %li
     .container
-      %div
+      %div.controls
         Rows: 
         %input.input-mini{'ng-model'=>"rows"}
         Columns:
@@ -40,17 +40,17 @@
         %input.button.btn.btn-primary{'ng-click' => 'showAnswers()', :type => "submit", :value => "Show Answers"} 
         %input.button.btn.btn-primary{'ng-click' => 'hideAnswers()', :type => "submit", :value => "Hide Answers"} 
       %br  
-      %br  
       %div.row.show-grid{'ng-repeat' => 'row in numerator'}
         %div.span12.math
           %div.row
             %div.span1{'ng-repeat' => 'col in denominator', :class => "span1"}
               .top &nbsp;    {{ random(row,col).top }}
               .bottom      + {{ random(row,col).bottom }}
-              .answer{'ng-class' => 'showAnswer'} {{ random(row,col).answer }}
+              .line
+              .answer 
+                &nbsp;
+                %span.result{'ng-class' => 'showAnswer'} {{ random(row,col).answer }}
           %div.row
-            %br
-            %br
 
     %script{:src => "assets/lib/jquery-1.7.1.min.js"}
     %script{:src => "assets/lib/bootstrap.min.js"}

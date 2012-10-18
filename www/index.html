@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class='container'>
-      <div>
+      <div class='controls'>
         Rows:
         <input class='input-mini' ng-model='rows' />
         Columns:
@@ -52,20 +52,20 @@
         <input class='button btn btn-primary' ng-click='hideAnswers()' type='submit' value='Hide Answers' />
       </div>
       <br />
-      <br />
       <div class='row show-grid' ng-repeat='row in numerator'>
         <div class='span12 math'>
           <div class='row'>
             <div class='span1' ng-repeat='col in denominator'>
               <div class='top'>&nbsp;    {{ random(row,col).top }}</div>
               <div class='bottom'>+ {{ random(row,col).bottom }}</div>
-              <div class='answer' ng-class='showAnswer'>{{ random(row,col).answer }}</div>
+              <div class='line'></div>
+              <div class='answer'>
+                &nbsp;
+                <span class='result' ng-class='showAnswer'>{{ random(row,col).answer }}</span>
+              </div>
             </div>
           </div>
-          <div class='row'>
-            <br />
-            <br />
-          </div>
+          <div class='row'></div>
         </div>
       </div>
     </div>
