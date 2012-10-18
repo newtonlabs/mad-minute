@@ -3,7 +3,7 @@
 .line   {border-bottom: #000 1px solid; margin: 0px}
 .math   {text-align: right; font-family: 'courier'; font-size: 18pt}
 .hidden {display: none}
-.answer {color: red; margin-bottom: 20px}
+.answer {color: red; margin-bottom: 25px}
 .math .row .span1{margin-right: 15px}
 
 @media print {
