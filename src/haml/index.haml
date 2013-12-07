@@ -10,7 +10,7 @@
     %link{:href => "assets/css/extensions.css", :rel => "stylesheet"}/
     :css
       body {
-        padding-top: 60px; 
+        padding-top: 60px;
       }
         %link{:href => "assets/css/bootstrap-responsive.css", :rel => "stylesheet"}/
     / Le HTML5 shim, for IE6-8 support of HTML5 elements
@@ -32,22 +32,22 @@
               %li
     .container
       %div.controls
-        Rows: 
+        Rows:
         %input.input-mini{'ng-model'=>"rows"}
         Columns:
         %input.input-mini{'ng-model'=>"cols"}
-        %input.button.btn.btn-primary{'ng-click' => 'calc()',        :type => "submit", :value => "Generate!"} 
-        %input.button.btn.btn-primary{'ng-click' => 'showAnswers()', :type => "submit", :value => "Show Answers"} 
-        %input.button.btn.btn-primary{'ng-click' => 'hideAnswers()', :type => "submit", :value => "Hide Answers"} 
-      %br  
+        %input.button.btn.btn-primary{'ng-click' => 'calc()',        :type => "submit", :value => "Generate!"}
+        %input.button.btn.btn-primary{'ng-click' => 'showAnswers()', :type => "submit", :value => "Show Answers"}
+        %input.button.btn.btn-primary{'ng-click' => 'hideAnswers()', :type => "submit", :value => "Hide Answers"}
+      %br
       %div.row.show-grid{'ng-repeat' => 'row in numerator'}
         %div.span12.math
           %div.row
             %div.span1{'ng-repeat' => 'col in denominator', :class => "span1"}
               .top &nbsp;    {{ random(row,col).top }}
-              .bottom      + {{ random(row,col).bottom }}
+              .bottom      X {{ random(row,col).bottom }}
               .line
-              .answer 
+              .answer
                 &nbsp;
                 %span.result{'ng-class' => 'showAnswer'} {{ random(row,col).answer }}
           %div.row

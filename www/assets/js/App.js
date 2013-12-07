@@ -2,7 +2,7 @@
 
   window.MathCtrl = function($scope) {
     var problems;
-    $scope.rows = 10;
+    $scope.rows = 4;
     $scope.cols = 10;
     $scope.problems = [];
     $scope.showAnswer = "hidden";
@@ -19,12 +19,12 @@
           _results1 = [];
           for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
             col = _ref1[_j];
-            top = Math.floor(Math.random() * 10);
-            bottom = Math.floor(Math.random() * 10);
+            top = Math.floor(Math.floor((Math.random() * 5) + 0));
+            bottom = Math.floor(Math.floor((Math.random() * 10) + 0));
             _results1.push($scope.problems[row][col] = {
               top: top,
               bottom: bottom,
-              answer: top + bottom
+              answer: top * bottom
             });
           }
           return _results1;

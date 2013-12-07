@@ -1,5 +1,5 @@
 window.MathCtrl = ($scope) ->
-  $scope.rows = 10
+  $scope.rows = 4
   $scope.cols = 10
   $scope.problems = []
   $scope.showAnswer = "hidden"
@@ -8,10 +8,10 @@ window.MathCtrl = ($scope) ->
     for row in $scope.numerator
       $scope.problems[row] = []
       for col in $scope.denominator
-        top    = Math.floor (Math.random() * 10)
-        bottom = Math.floor (Math.random() * 10)
+        top    = Math.floor Math.floor((Math.random()*5)+0);
+        bottom = Math.floor Math.floor((Math.random()*10)+0);
 
-        $scope.problems[row][col] = {top: top, bottom: bottom, answer: top + bottom}
+        $scope.problems[row][col] = {top: top, bottom: bottom, answer: top * bottom}
 
 
   $scope.calc = ->
